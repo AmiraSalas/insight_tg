@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
-import logoImage from "@assets/image_1762627537335.png";
+//import logoImage from "@assets/image_1762627537335.png";
 
 export function Header() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
