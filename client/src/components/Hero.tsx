@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SearchBar } from "./SearchBar";
-import heroImage from "@assets/548d3ba17a2ec4cf90f1892f3c08a366_1762627184514.jpg";
 
 interface HeroProps {
   onSearch: (query: string) => void;
@@ -18,11 +17,8 @@ export function Hero({ onSearch, onQuickFilter }: HeroProps) {
 
   return (
     <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-blue-700/50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/40 to-transparent" />
       
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 py-20 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" data-testid="text-hero-title">
