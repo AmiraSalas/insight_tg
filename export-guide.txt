@@ -1,0 +1,48 @@
+INSIGHT WEBSITE - COMPLETE CODE EXPORT
+=======================================
+
+KEY FILES TO EXPORT:
+===================
+
+FRONTEND (React):
+-----------------
+client/src/App.tsx - Main app router
+client/src/main.tsx - App entry point
+client/src/index.css - ALL your styles (blue theme, etc)
+client/src/pages/HomePage.tsx - Main landing page with filtering
+client/src/pages/AdminLogin.tsx - Admin login page
+client/src/pages/AdminDashboard.tsx - Admin panel for managing opportunities
+client/src/components/OpportunityCard.tsx - Card display component
+client/src/components/OpportunityForm.tsx - Add/Edit form
+client/src/components/Hero.tsx - Hero section
+client/src/components/Header.tsx - Top navigation
+client/src/components/FilterPanel.tsx - Filter sidebar
+client/src/components/EcuadorSection.tsx - Ecuador opportunities section
+client/src/components/Footer.tsx - Bottom footer
+client/src/components/EmptyState.tsx - Empty results display
+client/src/lib/queryClient.ts - API configuration
+client/src/lib/utils.ts - Utility functions
+
+BACKEND (Express + Node):
+------------------------
+server/index.ts - Main server file
+server/routes.ts - All API routes (opportunities, admin auth)
+server/storage.ts - Data storage interface
+server/seed.ts - Initial opportunity data
+server/vite.ts - Development server setup
+
+SHARED:
+-------
+shared/schema.ts - Data types for opportunities
+
+CONFIG FILES:
+------------
+package.json - Dependencies
+tsconfig.json - TypeScript config
+vite.config.ts - Build config
+tailwind.config.ts - Styling config
+components.json - UI component config
+
+UI COMPONENTS (Shadcn - in client/src/components/ui/):
+------------------------------------------------------
+All the pre-built components (buttons, cards, forms, etc.)
