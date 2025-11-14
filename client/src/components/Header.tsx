@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
-
+import { Moon, Sun, Lightbulb } from "lucide-react";
 
 export function Header() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -24,11 +23,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img 
-            src={logoImage} 
-            alt="INSIGHT Logo" 
-            className="h-10 w-10"
-          />
+          <Lightbulb className="h-8 w-8 text-primary" />
           <span className="font-bold text-lg" data-testid="text-logo">INSIGHT</span>
         </div>
 
