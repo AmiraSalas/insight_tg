@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import emptyStateImage from "@assets/generated_images/Telescope_searching_illustration_3fcac84b.png";
+import { Search } from "lucide-react";
 
 interface EmptyStateProps {
   onClearFilters: () => void;
@@ -8,11 +8,9 @@ interface EmptyStateProps {
 export function EmptyState({ onClearFilters }: EmptyStateProps) {
   return (
     <div className="flex flex-col items-center justify-center py-16 px-4 text-center" data-testid="container-empty-state">
-      <img 
-        src={emptyStateImage} 
-        alt="No results found" 
-        className="w-48 h-48 mb-6 opacity-50"
-      />
+      <div className="w-48 h-48 mb-6 flex items-center justify-center">
+        <Search className="w-24 h-24 text-muted-foreground/30" />
+      </div>
       <h3 className="text-2xl font-semibold mb-2" data-testid="text-empty-title">
         No opportunities found
       </h3>
