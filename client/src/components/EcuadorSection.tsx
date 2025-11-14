@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Globe } from "lucide-react";
-import ecuadorImage from "@assets/generated_images/Ecuador_Mitad_del_Mundo_monument_f4f2e49f.png";
 
 export function EcuadorSection() {
   const ecuadorOpportunities = [
@@ -68,12 +67,10 @@ export function EcuadorSection() {
             </Button>
           </div>
 
-          <div className="hidden lg:block">
-            <img 
-              src={ecuadorImage} 
-              alt="Ecuador Mitad del Mundo" 
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="rounded-lg bg-primary/10 p-12 flex items-center justify-center">
+              <Globe className="w-48 h-48 text-primary/40" />
+            </div>
           </div>
         </div>
       </div>
