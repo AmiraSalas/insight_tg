@@ -7,6 +7,11 @@ import { seedDatabase } from "./seed";
 
 const app = express();
 
+// Trust Render's proxy for production
+if (process.env.NODE_ENV === "production") {
+  app.set("trust proxy", 1);
+}
+
 declare module 'http' {
   interface IncomingMessage {
     rawBody: unknown
@@ -30,16 +35,18 @@ app.use(express.urlencoded({ extended: false }));
 const MemoryStore = createMemoryStore(session);
 app.use(
   session({
-    secret: process.env.SESSION_SECRET || "insight-dev-secret-change-in-production",
+    secret: process.env.SESSION_SECRET || "treedogpianoman",
     resave: false,
     saveUninitialized: false,
     cookie: {
       secure: process.env.NODE_ENV === "production",
       httpOnly: true,
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
     },
+    proxy: process.env.NODE_ENV === "production",
     store: new MemoryStore({
-      checkPeriod: 86400000, // prune expired entries every 24h
+      checkPeriod: 86400000,
     }),
   })
 );
